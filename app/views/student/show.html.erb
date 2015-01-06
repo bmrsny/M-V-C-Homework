@@ -1,4 +1,10 @@
 <h1>SHOW PAGE BRUH</h1>
 <p>
-  @student
+  <%= @student.first_name %>
 </p>
+<ul>
+  <% @student.achievements.each do |list| %>
+  <li><%= list.description %></li>
+  <li><%= list.awarded_on %></li>
+  <% end %>
+</ul>
